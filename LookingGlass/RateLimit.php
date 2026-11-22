@@ -71,6 +71,11 @@ class RateLimit
                 // check error code of execution
                 $this->ErrorMessage($q);
             }
+
+            // close database connection
+            $dbh = null;
+
+            return true;
         }
 
         // typecast SQLite results
